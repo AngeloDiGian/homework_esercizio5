@@ -1,0 +1,18 @@
+ip addr add 10.42.132.153/30 dev eth0   # R7
+ip addr add 10.42.32.1/19 dev eth1      # Campania
+ip addr add 10.42.132.157/30 dev eth2   # R11
+ip addr add 10.42.132.146/30 dev eth3   # R4
+
+# Routing Nord (via R4)
+ip route add 10.42.120.0/21 via 10.42.132.145 dev eth3  # Toscana - Veneto
+ip route add 10.42.128.0/22 via 10.42.132.145 dev eth3  # Liguria
+ip route add 10.42.132.0/25 via 10.42.132.145 dev eth3  # Marche
+
+# Routing Sud (via R8)
+ip route add 10.42.112.0/21 via 10.42.132.158 dev eth2  # Sardegna (su R11)
+ip route add 10.42.96.0/20 via 10.42.132.158 dev eth2   # Sicilia (su R10)
+ip route add 10.42.64.0/19 via 10.42.132.158 dev eth2   # Calabria (su R8)
+ip route add 10.42.0.0/19 via 10.42.132.158 dev eth2    # Puglia (su R9)
+
+# Routing (via R4)
+ip route add default via 10.42.132.145 dev eth3

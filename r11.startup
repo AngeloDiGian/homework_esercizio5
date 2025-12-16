@@ -1,0 +1,6 @@
+ip addr add 10.42.132.158/30 dev eth0   # R6
+ip addr add 10.42.132.174/30 dev eth1   # R10
+ip addr add 10.42.112.1/21 dev eth2     # Sardegna
+
+# Routing (verso R10)
+ip route add default via 10.42.132.173 dev eth1

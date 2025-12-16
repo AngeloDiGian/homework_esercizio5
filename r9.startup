@@ -1,0 +1,6 @@
+ip addr add 10.42.0.1/19 dev eth0       # Puglia
+ip addr add 10.42.132.166/30 dev eth1   # R8
+ip addr add 10.42.132.162/30 dev eth2   # R7
+
+# Routing (verso R7)
+ip route add default via 10.42.132.161 dev eth2

@@ -1,0 +1,7 @@
+ip addr add 10.42.132.161/30 dev eth0   # R9
+ip addr add 10.42.132.154/30 dev eth1   # R6
+ip addr add 10.42.132.1/25 dev eth2     # Marche
+ip addr add 10.42.132.150/30 dev eth3   # R5
+
+# Routing (verso R6)
+ip route add default via 10.42.132.153 dev eth1

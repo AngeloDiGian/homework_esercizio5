@@ -1,0 +1,6 @@
+ip addr add 10.42.132.130/30 dev eth0   # R1
+ip addr add 10.42.132.137/30 dev eth1   # R4
+ip addr add 10.42.128.1/22 dev eth2     # Liguria
+
+# Routing (verso R1)
+ip route add default via 10.42.132.129 dev eth0

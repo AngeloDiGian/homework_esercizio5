@@ -1,0 +1,6 @@
+ip addr add 10.42.132.170/30 dev eth0   # R8
+ip addr add 10.42.96.1/20 dev eth1      # Sicilia
+ip addr add 10.42.132.173/30 dev eth2   # R11
+
+# Routing (verso R8)
+ip route add default via 10.42.132.169 dev eth0

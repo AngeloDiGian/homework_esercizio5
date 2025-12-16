@@ -1,0 +1,6 @@
+ip addr add 10.42.124.1/22 dev eth0     # Veneto
+ip addr add 10.42.132.141/30 dev eth1       # R5
+ip addr add 10.42.132.134/30 dev eth2       # R1
+
+# Routing (verso R5)
+ip route add default via 10.42.132.142 dev eth1

@@ -1,0 +1,6 @@
+ip addr add 10.42.132.165/30 dev eth0   # R9
+ip addr add 10.42.64.1/19 dev eth1      # Calabria
+ip addr add 10.42.132.169/30 dev eth2   # R10
+
+# Routing (verso R9)
+ip route add default via 10.42.132.166 dev eth0

@@ -1,0 +1,6 @@
+ip addr add 10.42.120.1/22 dev eth0     # Toscana
+ip addr add 10.42.132.145/30 dev eth1   # R6
+ip addr add 10.42.132.138/30 dev eth2   # R2
+
+# Routing (verso R2)
+ip route add default via 10.42.132.137 dev eth2
